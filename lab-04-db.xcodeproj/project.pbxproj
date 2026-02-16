@@ -22,6 +22,10 @@
 		220267852F304C5000819DB5 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220267842F304C5000819DB5 /* AuthViewModel.swift */; };
 		220267872F304CFC00819DB5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220267862F304CFC00819DB5 /* LoginView.swift */; };
 		2202678A2F3059AC00819DB5 /* FContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220267892F3059AC00819DB5 /* FContentView.swift */; };
+		223558C52F42F76A00C7C043 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223558C42F42F76A00C7C043 /* Note.swift */; };
+		223558C72F42F84000C7C043 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223558C62F42F84000C7C043 /* FirestoreManager.swift */; };
+		223558C92F42F8D500C7C043 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223558C82F42F8D500C7C043 /* AddNoteView.swift */; };
+		223558CC2F42FAF500C7C043 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 223558CB2F42FAF500C7C043 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,9 @@
 		220267862F304CFC00819DB5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		220267882F30548B00819DB5 /* lab-04-db.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "lab-04-db.entitlements"; sourceTree = "<group>"; };
 		220267892F3059AC00819DB5 /* FContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FContentView.swift; sourceTree = "<group>"; };
+		223558C42F42F76A00C7C043 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		223558C62F42F84000C7C043 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		223558C82F42F8D500C7C043 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223558CC2F42FAF500C7C043 /* FirebaseFirestoreSwift in Frameworks */,
 				220267812F304ABA00819DB5 /* FirebaseDatabase in Frameworks */,
 				220267832F304ABA00819DB5 /* FirebaseFirestore in Frameworks */,
 				2202677D2F304ABA00819DB5 /* FirebaseAnalytics in Frameworks */,
@@ -95,6 +103,7 @@
 				2202675D2F3047B000819DB5 /* lab-04-dbTests */,
 				220267672F3047B000819DB5 /* lab-04-dbUITests */,
 				2202674B2F3047AE00819DB5 /* Products */,
+				223558CA2F42FAEB00C7C043 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +129,9 @@
 				220267842F304C5000819DB5 /* AuthViewModel.swift */,
 				220267862F304CFC00819DB5 /* LoginView.swift */,
 				220267892F3059AC00819DB5 /* FContentView.swift */,
+				223558C42F42F76A00C7C043 /* Note.swift */,
+				223558C62F42F84000C7C043 /* FirestoreManager.swift */,
+				223558C82F42F8D500C7C043 /* AddNoteView.swift */,
 			);
 			path = "lab-04-db";
 			sourceTree = "<group>";
@@ -149,6 +161,13 @@
 			path = "lab-04-dbUITests";
 			sourceTree = "<group>";
 		};
+		223558CA2F42FAEB00C7C043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +189,7 @@
 				2202677E2F304ABA00819DB5 /* FirebaseAuth */,
 				220267802F304ABA00819DB5 /* FirebaseDatabase */,
 				220267822F304ABA00819DB5 /* FirebaseFirestore */,
+				223558CB2F42FAF500C7C043 /* FirebaseFirestoreSwift */,
 			);
 			productName = "lab-04-db";
 			productReference = 2202674A2F3047AE00819DB5 /* lab-04-db.app */;
@@ -290,10 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				220267502F3047AE00819DB5 /* ContentView.swift in Sources */,
+				223558C72F42F84000C7C043 /* FirestoreManager.swift in Sources */,
 				2202678A2F3059AC00819DB5 /* FContentView.swift in Sources */,
 				2202674E2F3047AE00819DB5 /* lab_04_dbApp.swift in Sources */,
 				220267872F304CFC00819DB5 /* LoginView.swift in Sources */,
 				220267852F304C5000819DB5 /* AuthViewModel.swift in Sources */,
+				223558C92F42F8D500C7C043 /* AddNoteView.swift in Sources */,
+				223558C52F42F76A00C7C043 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +675,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2202677B2F304ABA00819DB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		223558CB2F42FAF500C7C043 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2202677B2F304ABA00819DB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
